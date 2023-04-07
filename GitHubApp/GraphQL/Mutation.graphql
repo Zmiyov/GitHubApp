@@ -1,0 +1,11 @@
+mutation CreateRepository($name: String!, $description: String,
+  $visibility: RepositoryVisibility!, $clientMutationId: String) {
+  createRepository(input: {
+    name: $name
+    description: $description
+    visibility: $visibility
+    clientMutationId: $clientMutationId
+  }) {
+    clientMutationId
+  }
+}
